@@ -14,7 +14,6 @@ const Main = styled.main``;
 
 function App() {
     const [showMenuOverlay, setShowMenuOverlay] = useState(false);
-    console.log(showMenuOverlay);
     return (
         <Container showMenuOverlay={showMenuOverlay}>
             <Header
