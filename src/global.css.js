@@ -15,12 +15,11 @@ const GlobalStyles = createGlobalStyle`
         ::-webkit-scrollbar {
             display: none;
         }
-}
+    }
 
     body {
         /* font-family: 'Alata', sans-serif; */
         /* font-family: 'Josefin Sans', sans-serif; */
-    }
     }
 `;
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import HeroBackgroundMobile from '../images/mobile/image-hero.jpg';
@@ -22,9 +22,7 @@ const Container = styled.header`
     }
 `;
 
-const Header = () => {
-    const [showMenuOverlay, setShowMenuOverlay] = useState(false);
-
+const Header = ({ showMenuOverlay, setShowMenuOverlay }) => {
     return (
         <Container>
             <Navbar

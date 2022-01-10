@@ -12,15 +12,15 @@ const Container = styled.div`
     background-color: ${(props) => props.theme.colors.black};
     transition: all 1s ease;
     -webkit-transform: ${(props) =>
-        props.showMenuOverlay ? 'translateY(0)' : 'translateY(-100vh)'};
+        props.showMenuOverlay ? 'translateX(0)' : 'translateX(100%)'};
     -moz-transform: ${(props) =>
-        props.showMenuOverlay ? 'translateY(0)' : 'translateY(-100vh)'};
+        props.showMenuOverlay ? 'translateX(0)' : 'translateX(100%)'};
     -ms-transform: ${(props) =>
-        props.showMenuOverlay ? 'translateY(0)' : 'translateY(-100vh)'};
+        props.showMenuOverlay ? 'translateX(0)' : 'translateX(100%)'};
     -o-transform: ${(props) =>
-        props.showMenuOverlay ? 'translateY(0)' : 'translateY(-100vh)'};
+        props.showMenuOverlay ? 'translateX(0)' : 'translateX(100%)'};
     transform: ${(props) =>
-        props.showMenuOverlay ? 'translateY(0)' : 'translateY(-100vh)'};
+        props.showMenuOverlay ? 'translateX(0)' : 'translateX(100%)'};
 `;
 
 const UL = styled.ul`
