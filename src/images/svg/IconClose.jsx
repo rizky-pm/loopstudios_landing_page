@@ -3,8 +3,8 @@ import styled from 'styled-components/macro';
 import SvgHeader from '../../customsvg';
 
 const Svg = styled(SvgHeader)`
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     display: ${(props) => (props.showMenuOverlay ? 'block' : 'none')};
 `;
 

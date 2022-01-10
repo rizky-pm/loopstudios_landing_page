@@ -3,8 +3,8 @@ import styled from 'styled-components/macro';
 import SvgHeader from '../../customsvg';
 
 const Svg = styled(SvgHeader)`
-    width: 24px;
-    height: 20px;
+    width: 1.5rem;
+    height: 1.25rem;
 `;
 
 export const IconTwitter = ({ className }) => (

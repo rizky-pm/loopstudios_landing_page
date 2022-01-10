@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { UL, LI } from './elements/List';
+import { Link } from './elements/Link';
+
 import { Logo } from '../images/svg/BrandLogo';
 import { IconFacebook } from '../images/svg/IconFacebook';
 import { IconInstagram } from '../images/svg/IconInstagram';
@@ -9,48 +12,64 @@ import { IconTwitter } from '../images/svg/IconTwitter';
 import { CopyrightText } from './elements/Paragraph';
 
 const Container = styled.footer`
-    padding: 70px 0;
+    padding: 4.375rem 0;
     background-color: ${(props) => props.theme.colors.black};
     display: flex;
     flex-direction: column;
     align-items: center;
-`;
 
-const SvgContainer = styled.div``;
+    @media only screen and (${(props) => props.theme.breakpoints.lDevices}) {
+        height: 10rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0rem 0rem;
+        grid-template-areas:
+            'brand social-media'
+            'links copyright';
 
-const UL = styled.ul`
-    margin-top: 35px;
-`;
-
-const LI = styled.li`
-    text-align: center;
-    &:not(:last-of-type) {
-        margin-bottom: 20px;
+        padding: 2.5rem 10rem;
     }
 `;
 
-const Link = styled.a`
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.white};
-    font-family: 'Alata', sans-serif;
+const SvgContainer = styled.div`
+    @media only screen and (${(props) => props.theme.breakpoints.lDevices}) {
+        grid-area: brand;
+        justify-self: flex-start;
+    }
 `;
 
 const SocialMediaContainer = styled.div`
-    width: 150px;
-    margin-top: 45px;
-    margin-bottom: 20px;
+    width: 9.375rem;
+    margin-top: 2.8125rem;
+    margin-bottom: 1.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (${(props) => props.theme.breakpoints.lDevices}) {
+        grid-area: social-media;
+        justify-self: flex-end;
+        margin: 0;
+    }
+`;
+
+const FooterUL = styled(UL)`
+    margin-top: 2.1875rem;
+
+    @media only screen and (${(props) => props.theme.breakpoints.lDevices}) {
+        display: flex;
+        margin-top: 0;
+    }
 `;
 
 const Footer = () => {
     return (
         <Container>
             <SvgContainer>
-                <Logo />
+                <Logo footer />
             </SvgContainer>
-            <UL>
+            <FooterUL footer>
                 <LI>
                     <Link href='#'>About</Link>
                 </LI>
@@ -63,15 +82,23 @@ const Footer = () => {
                 <LI>
                     <Link href='#'>Products</Link>
                 </LI>
-                <LI>
+                <LI lastLi>
                     <Link href='#'>Support</Link>
                 </LI>
-            </UL>
+            </FooterUL>
             <SocialMediaContainer>
-                <IconFacebook />
-                <IconTwitter />
-                <IconPinterest />
-                <IconInstagram />
+                <Link href='#'>
+                    <IconFacebook />
+                </Link>
+                <Link twitter href='#'>
+                    <IconTwitter />
+                </Link>
+                <Link href='#'>
+                    <IconPinterest />
+                </Link>
+                <Link href='#'>
+                    <IconInstagram />
+                </Link>
             </SocialMediaContainer>
             <CopyrightText>
                 &copy; Loopstudios.All rights reserved.

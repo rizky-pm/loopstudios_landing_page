@@ -9,11 +9,11 @@ export const theme = {
         veryDarkGray: 'rgb(105, 105, 105)',
     },
     breakpoints: {
-        xsDevices: 'max-width: 575px',
-        sDevices: 'min-width: 576px',
-        mDevices: 'min-width: 768px',
-        lDevices: 'min-width: 992px',
-        xlDevices: 'min-width: 1200px',
+        xsDevices: 'max-width: 35.9375rem',
+        sDevices: 'min-width: 36rem',
+        mDevices: 'min-width: 48rem',
+        lDevices: 'min-width: 62rem',
+        xlDevices: 'min-width: 75rem',
     },
 };
 
