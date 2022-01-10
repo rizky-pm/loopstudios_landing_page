@@ -12,6 +12,11 @@ const GlobalStyles = createGlobalStyle`
     html {
         font-size: 93.75%;
 
+        ::-webkit-scrollbar {
+            display: none;
+        }
+}
+
     body {
         /* font-family: 'Alata', sans-serif; */
         /* font-family: 'Josefin Sans', sans-serif; */

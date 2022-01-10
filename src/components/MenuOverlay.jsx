@@ -11,6 +11,14 @@ const Container = styled.div`
     width: 100%;
     background-color: ${(props) => props.theme.colors.black};
     transition: all 1s ease;
+    -webkit-transform: ${(props) =>
+        props.showMenuOverlay ? 'translateY(0)' : 'translateY(-100vh)'};
+    -moz-transform: ${(props) =>
+        props.showMenuOverlay ? 'translateY(0)' : 'translateY(-100vh)'};
+    -ms-transform: ${(props) =>
+        props.showMenuOverlay ? 'translateY(0)' : 'translateY(-100vh)'};
+    -o-transform: ${(props) =>
+        props.showMenuOverlay ? 'translateY(0)' : 'translateY(-100vh)'};
     transform: ${(props) =>
         props.showMenuOverlay ? 'translateY(0)' : 'translateY(-100vh)'};
 `;

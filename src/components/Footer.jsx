@@ -17,16 +17,19 @@ const Container = styled.footer`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     @media only screen and (${(props) => props.theme.breakpoints.lDevices}) {
-        height: 10rem;
+        height: 12.5rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 0rem 0rem;
+        grid-template-rows: 1fr 1fr 1fr;
+        /* gap: 0rem 0rem; */
+        row-gap: 1.25rem;
         grid-template-areas:
             'brand social-media'
-            'links copyright';
+            'links copyright'
+            'attribution attribution';
 
         padding: 2.5rem 10rem;
     }
@@ -60,6 +63,32 @@ const FooterUL = styled(UL)`
     @media only screen and (${(props) => props.theme.breakpoints.lDevices}) {
         display: flex;
         margin-top: 0;
+    }
+`;
+
+const Attribution = styled.div`
+    grid-area: attribution;
+    margin-top: 1.875rem;
+    width: 65%;
+    text-align: center;
+    color: ${(props) => props.theme.colors.darkGray};
+    font-family: 'Alata', sans-serif;
+
+    @media only screen and (${(props) => props.theme.breakpoints.lDevices}) {
+        text-align: left;
+        margin-top: 0;
+        width: auto;
+        justify-self: flex-end;
+    }
+`;
+
+const AttributionLink = styled(Link)`
+    color: ${(props) => props.theme.colors.white};
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: ${(props) => props.theme.colors.white};
     }
 `;
 
@@ -101,8 +130,23 @@ const Footer = () => {
                 </Link>
             </SocialMediaContainer>
             <CopyrightText>
-                &copy; Loopstudios.All rights reserved.
+                &copy; Loopstudios. All rights reserved.
             </CopyrightText>
+            <Attribution>
+                Challenge by{' '}
+                <AttributionLink
+                    href='https://www.frontendmentor.io?ref=challenge'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    Frontend Mentor
+                </AttributionLink>
+                . Coded by{' '}
+                <AttributionLink href='https://github.com/rizky-pm'>
+                    Rizky Putra Mahendra
+                </AttributionLink>
+                🔥
+            </Attribution>
         </Container>
     );
 };
