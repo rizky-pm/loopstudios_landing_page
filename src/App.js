@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 
 const Container = styled.div`
     position: ${(props) => (props.showMenuOverlay ? 'fixed' : 'static')};
+    overflow: hidden;
 `;
 
 const Main = styled.main``;
